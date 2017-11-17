@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour {
+public class Countdown : MonoBehaviour {
+
+	public bool counterDownDone = false;
 
 	// Use this for initialization
 	void Start () {
