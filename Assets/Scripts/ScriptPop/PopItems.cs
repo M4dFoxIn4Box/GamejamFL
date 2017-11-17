@@ -19,7 +19,6 @@ public class PopItems : MonoBehaviour {
         GMS = GameObject.Find ("UImanager").GetComponent<Countdown>();
 		InvokeRepeating("RandoPop", 0.001f, spawnInterval);
 	}
-	
 
 	void RandoPop () {
     if(GMS.counterDownDone == true)
