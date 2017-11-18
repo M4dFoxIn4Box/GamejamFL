@@ -11,14 +11,5 @@ public class Aliments : MonoBehaviour {
     }
 
     public AlimType type;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public int amountScored;
 }

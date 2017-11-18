@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class levelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Text TeamBlue;
+    public Text TeamRed;
+
+    public static LevelManager Instance { get; private set; }
+
+    public void BlueTeamScore (int BlueScore)
+    {
+       TeamBlue.text = BlueScore.ToString("f0");
+    }
+
+    public void RedTeamScore(int RedScore)
+    {
+       TeamRed.text = RedScore.ToString("f0");
+    }
 }

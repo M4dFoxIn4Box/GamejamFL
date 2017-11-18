@@ -24,8 +24,13 @@ public class ScoreSystem : MonoBehaviour {
         {
             if (other.gameObject.CompareTag("Blueteam"))
             {
-
+                LevelManager.Instance.BlueTeamScore(aliment.amountScored);
+            }
+            else if(other.gameObject.CompareTag("Redteam"))
+            {
+                LevelManager.Instance.BlueTeamScore(aliment.amountScored);
             }
         }
+     
     }
 }
