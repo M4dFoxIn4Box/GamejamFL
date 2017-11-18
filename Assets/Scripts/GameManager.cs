@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
         actualBlueScore = 0;
         TeamBlue.text = actualBlueScore.ToString("f0");
         TeamRed.text = actualRedScore.ToString("f0");
+        StartingIdx();
     }
 
     // Update is called once per frame
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour {
     public void ListEntry()
     {
         spawnIdx.Clear();
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 10; i++)
         {
             spawnIdx.Add(i);
         }

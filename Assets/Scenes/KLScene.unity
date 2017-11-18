@@ -1188,7 +1188,13 @@ Prefab:
       propertyPath: endText
       value: 
       objectReference: {fileID: 1854994354}
-    m_RemovedComponents: []
+    - target: {fileID: 114688205285042992, guid: d470626a61cbfb440b201452650fda97,
+        type: 2}
+      propertyPath: timerInitial
+      value: 120
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114476866205057386, guid: d470626a61cbfb440b201452650fda97, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d470626a61cbfb440b201452650fda97, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &796748397
