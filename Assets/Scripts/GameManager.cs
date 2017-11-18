@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -26,13 +27,16 @@ public class GameManager : MonoBehaviour {
     public Text endBlue;
     public Text endRed;
     public Text endText;
+    public int buildIndex;
 
     // Use this for initialization
     private void Awake()
     {
         Instance = this;
+        buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
     void Start() {
+
         timerActual = timerInitial;
         ListEntry();
         actualRedScore = 0;
@@ -114,5 +118,15 @@ public class GameManager : MonoBehaviour {
                 endText.text = "Egalite !!";
             }
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(buildIndex, LoadSceneMode.Single);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }
