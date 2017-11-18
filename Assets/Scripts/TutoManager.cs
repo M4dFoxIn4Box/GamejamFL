@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutoManager : MonoBehaviour
 {
@@ -15,16 +16,17 @@ public class TutoManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
         {
-          if(Input.GetButtonDown("graButton"))
+          if(Input.GetButtonDown("Submit") && tuto == true)
             {
                 Time.timeScale = 1;
+                SceneManager.LoadScene("GameScene");
             }
         }
 	public void TutoLaunch ()
-    {
-       Time.timeScale = 0;
-       tuto.SetActive(true);
-    }
+            {
+               Time.timeScale = 0;
+               tuto.SetActive(true);
+            }
 }
 
 
