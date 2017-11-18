@@ -16,17 +16,19 @@ public class TutoManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
         {
-          if(Input.GetButtonDown("Submit") && tuto == true)
-            {
-                Time.timeScale = 1;
-                SceneManager.LoadScene("GameScene");
-            }
+       
         }
 	public void TutoLaunch ()
             {
                Time.timeScale = 0;
                tuto.SetActive(true);
             }
+
+    public void TutoEnd ()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("GameScene");
+    }
 }
 
 

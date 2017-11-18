@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/KLScene.unity
-    guid: 5a115e18ef9099e4ea6944ba1c712bc5
+    path: Assets/Scenes/LCScene.unity
+    guid: 02baf039b0a755546b76262287627780
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: aeb3c090a5da18248876d226c8b08416
