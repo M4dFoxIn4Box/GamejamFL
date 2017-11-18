@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 23894571801491790}
   - component: {fileID: 54612769493346950}
   - component: {fileID: 114648303688595230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,7 +281,12 @@ MonoBehaviour:
   grabbedPlace: {fileID: 1225374445584866}
   grabbedObjectActive: {fileID: 0}
   moveSpeed: 10
+  moveHorizontal: Horizontal_P1
+  moveVertical: Vertical_P1
+  grabButton: Grab/Throw_P1
+  Ennemy: {fileID: 0}
   isGrabbed: 0
+  canPunch: 0
 --- !u!114 &114901925170102046
 MonoBehaviour:
   m_ObjectHideFlags: 1

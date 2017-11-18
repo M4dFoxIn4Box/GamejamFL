@@ -16,21 +16,29 @@ public class FLTrigger : MonoBehaviour {
 
     public void OnTriggerEnter(Collider collision)
     {
-        
-            PlayerManager.Instance.grabbedObjectActive = collision.gameObject;
-
-    }
-
-    public void OnTriggerExit(Collider collision)
-    {
-        PlayerManager player = collision.gameObject.GetComponentInParent<PlayerManager>();
-        if (player.isGrabbed == false)
+        if( collision.gameObject.CompareTag("FL"))
         {
-            if (player.faceCollider)
-            {
-                player.grabbedObjectActive = null;
-            }
+            PlayerManager player = gameObject.GetComponentInParent<PlayerManager>();
+            player.grabbedObjectActive = collision.gameObject;
+            return;
         }
         
+        if (collision.gameObject.CompareTag("Player"))
+        {
+           PlayerManager player = gameObject.GetComponentInParent<PlayerManager>();
+            player.Ennemy = collision.gameObject;
+            return;
+        }
+
     }
+    public void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerManager player = gameObject.GetComponentInParent<PlayerManager>();
+            player.Ennemy = null;
+
+        }
+    }
+
 }
