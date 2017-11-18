@@ -22,14 +22,20 @@ public class ScoreSystem : MonoBehaviour {
         Aliments aliment = other.gameObject.GetComponentInParent<Aliments>();
         if(aliment.type == type)
         {
-            if (other.gameObject.CompareTag("Blueteam"))
+            if (aliment.CompareTag("BlueTeam"))
             {
                 LevelManager.Instance.BlueTeamScore(aliment.amountScored);
+                Destroy(aliment);
             }
-            else if(other.gameObject.CompareTag("Redteam"))
+            else if(aliment.CompareTag("RedTeam"))
             {
-                LevelManager.Instance.BlueTeamScore(aliment.amountScored);
+                LevelManager.Instance.RedTeamScore(aliment.amountScored);
+                Destroy(aliment);
             }
+        }
+        else
+        {
+            Destroy(aliment);
         }
      
     }

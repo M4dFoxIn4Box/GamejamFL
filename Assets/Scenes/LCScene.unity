@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 1586907834}
   m_Layer: 0
   m_Name: Legume
-  m_TagString: Untagged
+  m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -791,7 +791,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1586907828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 166.8, y: 36.26673, z: 63.5}
+  m_LocalPosition: {x: 166.8, y: 36.26673, z: 137.8}
   m_LocalScale: {x: 8.771495, y: 8.771488, z: 8.771488}
   m_Children: []
   m_Father: {fileID: 0}
@@ -910,11 +910,11 @@ GameObject:
   - component: {fileID: 1937651352}
   - component: {fileID: 1937651351}
   - component: {fileID: 1937651350}
-  - component: {fileID: 1937651354}
   - component: {fileID: 1937651355}
+  - component: {fileID: 1937651354}
   m_Layer: 0
   m_Name: Fruit
-  m_TagString: Untagged
+  m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

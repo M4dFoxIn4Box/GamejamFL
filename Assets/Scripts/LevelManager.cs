@@ -7,16 +7,20 @@ public class LevelManager : MonoBehaviour {
 
     public Text TeamBlue;
     public Text TeamRed;
+    private int actualBlueScore;
+    private int actualRedScore;
 
     public static LevelManager Instance { get; private set; }
 
-    public void BlueTeamScore (int BlueScore)
+    public void BlueTeamScore (int blueScore)
     {
-       TeamBlue.text = BlueScore.ToString("f0");
+       actualBlueScore += blueScore;
+       TeamBlue.text = actualBlueScore.ToString("f0");
     }
 
-    public void RedTeamScore(int RedScore)
+    public void RedTeamScore(int redScore)
     {
-       TeamRed.text = RedScore.ToString("f0");
+        actualBlueScore += redScore;
+        TeamRed.text = actualRedScore.ToString("f0");
     }
 }
