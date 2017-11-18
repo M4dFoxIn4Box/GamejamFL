@@ -26,11 +26,12 @@ void Update()
 	{
 		hasPlayer = false;
 	}
-	if (hasPlayer && Input.GetButtonDown("use"))
+	if (hasPlayer && Input.GetButtonDown("Fire1") && !beingCarried)
 	{
 		GetComponent<Rigidbody>().isKinematic = true ;
 		transform.parent = playerCam ;
-		beingCarried = true ;
+            beingCarried = true ;
+            return;
 	}
 	if (beingCarried)
 	{
@@ -41,12 +42,12 @@ void Update()
 			beingCarried = false ;
 			touched = false ;
 		}
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetButtonDown("Fire1"))
 		{
 			GetComponent<Rigidbody>().isKinematic = false ;
 			transform.parent = null ; 
 			beingCarried = false ;
-			GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce) ;
+                GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce) ;
 		}
 		else if (Input.GetMouseButtonDown(1))
 		{
