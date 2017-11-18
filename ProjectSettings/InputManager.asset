@@ -118,11 +118,11 @@ InputManager:
     axis: 0
     joyNum: 5
   - serializedVersion: 3
-    m_Name: Horizontal_P6
+    m_Name: Check_P1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: joystick 1 button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -130,15 +130,15 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
-    joyNum: 6
+    joyNum: 1
   - serializedVersion: 3
-    m_Name: Horizontal_P7
+    m_Name: Check_P2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: joystick 2 button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -146,15 +146,15 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
-    joyNum: 7
+    joyNum: 2
   - serializedVersion: 3
-    m_Name: Horizontal_P8
+    m_Name: Check_P3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: joystick 3 button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -162,15 +162,15 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
-    joyNum: 8
+    joyNum: 3
   - serializedVersion: 3
-    m_Name: Horizontal_P9
+    m_Name: Check_P4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: joystick 4 button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -178,9 +178,9 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
-    joyNum: 9
+    joyNum: 4
   - serializedVersion: 3
     m_Name: Horizontal_P10
     descriptiveName: 

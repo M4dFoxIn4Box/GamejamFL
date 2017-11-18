@@ -11,8 +11,9 @@ public class PlayerManager : MonoBehaviour
     public GameObject grabbedObjectActive;
     public float moveSpeed;
     private Rigidbody myRigidbody;
+    public GameObject showPlayer;
 
-    public string moveHorizontal, moveVertical, grabButton;
+    public string moveHorizontal, moveVertical, grabButton, checkButton;
 
     public GameObject Ennemy;
 
@@ -35,17 +36,36 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveInput = new Vector3(Input.GetAxisRaw(moveHorizontal), 0f, Input.GetAxisRaw(moveVertical));
-        moveVelocity = moveInput * moveSpeed;
-
-        playerDirection = Vector3.right * Input.GetAxisRaw(moveHorizontal) + Vector3.forward * Input.GetAxisRaw(moveVertical);
-        if (playerDirection.sqrMagnitude > 0.0f)
+        if (GameManager.Instance.end == false)
         {
-            transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            ShowPlayer();
+            moveInput = new Vector3(Input.GetAxisRaw(moveHorizontal), 0f, Input.GetAxisRaw(moveVertical));
+            moveVelocity = moveInput * moveSpeed;
+
+            playerDirection = Vector3.right * Input.GetAxisRaw(moveHorizontal) + Vector3.forward * Input.GetAxisRaw(moveVertical);
+            if (playerDirection.sqrMagnitude > 0.0f)
+            {
+                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            }
+            Grab();
+            Punch();
         }
-        Grab();
-        Punch();
         
+        
+
+
+    }
+
+    void ShowPlayer()
+    {
+        if (Input.GetButtonDown(checkButton))
+        {
+            showPlayer.SetActive(true);
+        }
+        if (Input.GetButtonUp(checkButton))
+        {
+            showPlayer.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
