@@ -157,7 +157,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 93668120}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -326,12 +326,12 @@ Prefab:
     - target: {fileID: 224279629957920388, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000019073486
+      value: 0.000017166138
       objectReference: {fileID: 0}
     - target: {fileID: 224279629957920388, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224279629957920388, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
@@ -351,22 +351,22 @@ Prefab:
     - target: {fileID: 224279629957920388, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.43291175
+      value: 0.43415648
       objectReference: {fileID: 0}
     - target: {fileID: 224279629957920388, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.83439153
+      value: 0.85185957
       objectReference: {fileID: 0}
     - target: {fileID: 224279629957920388, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.8923518
+      value: 0.90981984
       objectReference: {fileID: 0}
     - target: {fileID: 224279629957920388, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.538591
+      value: 0.53983575
       objectReference: {fileID: 0}
     - target: {fileID: 224634493748189232, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
@@ -376,7 +376,7 @@ Prefab:
     - target: {fileID: 224634493748189232, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224634493748189232, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
@@ -396,6 +396,40 @@ Prefab:
     - target: {fileID: 224136516108155690, guid: 486889533b7058240a10d6837653b1bb,
         type: 2}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114801362178100400, guid: 486889533b7058240a10d6837653b1bb,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.011764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 114801362178100400, guid: 486889533b7058240a10d6837653b1bb,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 114801362178100400, guid: 486889533b7058240a10d6837653b1bb,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884017128313796, guid: 486889533b7058240a10d6837653b1bb,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884017128313796, guid: 486889533b7058240a10d6837653b1bb,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.18823531
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884017128313796, guid: 486889533b7058240a10d6837653b1bb,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.16470589
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548219835391728, guid: 486889533b7058240a10d6837653b1bb, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -438,7 +472,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 267367015}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -689,7 +723,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 559694414}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -771,7 +805,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 722563872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -853,7 +887,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 911114733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1037,7 +1071,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1140267353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1119,7 +1153,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175990230}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1296,7 +1330,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397931721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1434,7 +1468,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503929320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1516,7 +1550,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1667231329}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
