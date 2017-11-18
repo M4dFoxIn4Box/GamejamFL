@@ -5,10 +5,11 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour {
 
     public Aliments.AlimType type;
+    public Aliments.TeamType teamRed;
+    public Aliments.TeamType teamBlue;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -20,23 +21,20 @@ public class ScoreSystem : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         Aliments aliment = other.gameObject.GetComponentInParent<Aliments>();
-        if(aliment.type == type)
+        if(aliment.type == type && aliment.teamtype == teamRed)
         {
-            if (aliment.CompareTag("BlueTeam"))
-            {
-                LevelManager.Instance.BlueTeamScore(aliment.amountScored);
-                Destroy(aliment);
-            }
-            else if(aliment.CompareTag("RedTeam"))
-            {
-                LevelManager.Instance.RedTeamScore(aliment.amountScored);
-                Destroy(aliment);
-            }
+            GameManager.Instance.RedTeamScore(aliment.amountScored);
+            Destroy(aliment.gameObject);
+            GameManager.Instance.StartingIdx();
         }
-        else
+        if (aliment.type == type && aliment.teamtype == teamBlue)
         {
-            Destroy(aliment);
+            GameManager.Instance.BlueTeamScore(aliment.amountScored);
+            Destroy(aliment.gameObject);
+            GameManager.Instance.StartingIdx();
+
         }
-     
+
+
     }
 }

@@ -10,6 +10,13 @@ public class Aliments : MonoBehaviour {
         Legumes
     }
 
+    public enum TeamType
+    {
+        Red,
+        Blue
+    }
+
     public AlimType type;
+    public TeamType teamtype;
     public int amountScored;
 }
