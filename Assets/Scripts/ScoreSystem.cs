@@ -27,12 +27,17 @@ public class ScoreSystem : MonoBehaviour {
             Destroy(aliment.gameObject);
             GameManager.Instance.StartingIdx();
         }
-        if (aliment.type == type && aliment.teamtype == teamBlue)
+        else if (aliment.type == type && aliment.teamtype == teamBlue)
         {
             GameManager.Instance.BlueTeamScore(aliment.amountScored);
             Destroy(aliment.gameObject);
             GameManager.Instance.StartingIdx();
 
+        }
+       else
+        {
+            Destroy(aliment.gameObject);
+            GameManager.Instance.StartingIdx();
         }
 
 

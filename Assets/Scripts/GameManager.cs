@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour {
     public void ListEntry()
     {
         spawnIdx.Clear();
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 1; i++)
         {
             spawnIdx.Add(i);
         }
