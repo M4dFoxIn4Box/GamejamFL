@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour {
     public List<GameObject> spawnItems = new List<GameObject>();
     public GameObject canon;
     private List<int> spawnIdx = new List<int>();
-    public GameObject orange;
     private int idx;
     private int spawnObjectidx;
     public Text TeamBlue;
