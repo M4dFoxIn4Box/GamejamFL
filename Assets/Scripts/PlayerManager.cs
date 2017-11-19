@@ -142,6 +142,7 @@ public class PlayerManager : MonoBehaviour
         }
         if (ennemyManager.isGrabbed == false && Input.GetButtonDown(grabButton) && Ennemy != null)
         {
+       
             ennemyManager.Punched(gameObject);
 
         }
