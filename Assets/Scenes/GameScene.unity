@@ -38521,7 +38521,7 @@ Prefab:
         type: 2}
       propertyPath: launch
       value: 
-      objectReference: {fileID: 8300000, guid: 8b8d4fe74bc444146968b2e0c200464f, type: 3}
+      objectReference: {fileID: 8300000, guid: aae78196eec77b4498675de8d21a9d89, type: 3}
     - target: {fileID: 114688205285042992, guid: d470626a61cbfb440b201452650fda97,
         type: 2}
       propertyPath: grab
@@ -38542,6 +38542,11 @@ Prefab:
       propertyPath: timerInitial
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 114688205285042992, guid: d470626a61cbfb440b201452650fda97,
+        type: 2}
+      propertyPath: ahS
+      value: 
+      objectReference: {fileID: 8300000, guid: 64c12fd1cc788964795493d601bebc77, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d470626a61cbfb440b201452650fda97, type: 2}
   m_IsPrefabParent: 0

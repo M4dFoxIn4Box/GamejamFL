@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public AudioClip punch, canonSong, wrong, great, launch, grab;
+    public AudioClip punch, canonSong, wrong, great, launch, grab, ahS;
     public Transform spawnParent;
     public static GameManager Instance { get; private set; }
     public List<GameObject> spawnItems = new List<GameObject>();
@@ -128,12 +128,16 @@ public class GameManager : MonoBehaviour {
 
     public void Restart()
     {
+        audioSource.clip = ahS;
+        audioSource.Play();
         end = false;
         SceneManager.LoadScene(buildIndex);
     }
 
     public void ReturnToMenu()
     {
+        audioSource.clip = ahS;
+        audioSource.Play();
         SceneManager.LoadScene("MainScene");
     }
     public void PlayGrab()

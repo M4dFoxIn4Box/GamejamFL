@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TutoManager : MonoBehaviour
 {
+
+    private AudioSource ausioSS;
     public GameObject tuto;
     public GameObject tutoButton;
     
@@ -14,7 +16,7 @@ public class TutoManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-       
+        ausioSS = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class TutoManager : MonoBehaviour
 
 	public void TutoLaunch ()
             {
+        ausioSS.Play();
         GameObject myEventSystem = GameObject.Find("EventSystem");
         Time.timeScale = 0;
         tuto.SetActive(true);           
@@ -33,8 +36,15 @@ public class TutoManager : MonoBehaviour
 
     public void TutoEnd ()
     {
+        ausioSS.Play();
         Time.timeScale = 1;
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void Quit()
+    {
+        ausioSS.Play();
+        Application.Quit();
     }
 }
 
