@@ -36,6 +36,14 @@ public class ScoreSystem : MonoBehaviour {
         }
        else
         {
+            if (aliment.teamtype == teamBlue)
+            {
+                GameManager.Instance.BlueTeamScore(-1);
+            }
+            if (aliment.teamtype == teamRed)
+            {
+                GameManager.Instance.RedTeamScore(-1);
+            }
             Destroy(aliment.gameObject);
             GameManager.Instance.StartingIdx();
         }

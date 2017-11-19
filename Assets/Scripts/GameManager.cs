@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
     public Text endRed;
     public Text endText;
     public int buildIndex;
+    public ParticleSystem msokeCanon;
 
     // Use this for initialization
     private void Awake()
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour {
     public void ListEntry()
     {
         spawnIdx.Clear();
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 10; i++)
         {
             spawnIdx.Add(i);
         }
@@ -73,6 +74,7 @@ public class GameManager : MonoBehaviour {
     {
         RndIdx();
         Instantiate(spawnItems[spawnObjectidx], spawnParent.GetChild(spawnIdx[idx]).position, Quaternion.identity, spawnParent.GetChild(spawnIdx[idx]));
+        msokeCanon.Play();
     }
 
     public void BlueTeamScore(int blueScore)
@@ -121,6 +123,7 @@ public class GameManager : MonoBehaviour {
 
     public void Restart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(buildIndex, LoadSceneMode.Single);
     }
 
