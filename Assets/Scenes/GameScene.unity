@@ -1147,8 +1147,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5218463, y: 1, z: 4.6681304}
-  m_Center: {x: -0.4031087, y: 0, z: -0.8637873}
+  m_Size: {x: 0.55141735, y: 1, z: 4.927609}
+  m_Center: {x: -0.4079428, y: 0, z: -0.8939041}
 --- !u!1 &266514184
 GameObject:
   m_ObjectHideFlags: 0
@@ -7894,7 +7894,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395085928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.006999866, y: 0.049, z: 0.101}
+  m_LocalPosition: {x: -0.006999866, y: 0.13999999, z: 0.101}
   m_LocalScale: {x: 1.0788203, y: 1.5414596, z: 1.4162769}
   m_Children: []
   m_Father: {fileID: 312466555}
@@ -7921,8 +7921,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.11641284, y: 0.10337665, z: 0.09620265}
-  m_Center: {x: 0.012090084, y: 0.038450312, z: 0.05434407}
+  m_Size: {x: 0.11641285, y: 0.20507093, z: 0.09620264}
+  m_Center: {x: 0.012090084, y: -0.009106927, z: 0.054344065}
 --- !u!1 &1397931721
 GameObject:
   m_ObjectHideFlags: 0
@@ -8805,10 +8805,10 @@ MonoBehaviour:
   grabbedObjectActive: {fileID: 0}
   moveSpeed: 10
   showPlayer: {fileID: 552932322}
-  moveHorizontal: Horizontal_P1
-  moveVertical: Vertical_P1
-  grabButton: Grab/Throw_P1
-  checkButton: Check_P1
+  moveHorizontal: Horizontal_P2
+  moveVertical: Vertical_P2
+  grabButton: Grab/Throw_P2
+  checkButton: Check_P2
   Ennemy: {fileID: 0}
   isGrabbed: 0
   canPunch: 0
@@ -12640,7 +12640,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1676503519}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000025779007}
-  m_LocalPosition: {x: 0, y: -0.009, z: 0.242}
+  m_LocalPosition: {x: 0, y: 0.08199999, z: 0.242}
   m_LocalScale: {x: 1.0788203, y: 1.5414588, z: 1.416276}
   m_Children: []
   m_Father: {fileID: 2030423003}
@@ -12667,8 +12667,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.11641284, y: 0.10337665, z: 0.09620265}
-  m_Center: {x: 0.012090084, y: 0.038450312, z: 0.05434407}
+  m_Size: {x: 0.11641285, y: 0.20026053, z: 0.096202634}
+  m_Center: {x: 0.012090084, y: 0.028761325, z: 0.054344065}
 --- !u!4 &1685699672 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4471588388638640, guid: 4a018f55ea7606f408c7fff4cb2510d4,
@@ -13366,7 +13366,7 @@ MonoBehaviour:
   moveHorizontal: Horizontal_P1
   moveVertical: Vertical_P1
   grabButton: Grab/Throw_P1
-  checkButton: Check_P1
+  checkButton: Check_P4
   Ennemy: {fileID: 0}
   isGrabbed: 0
   canPunch: 0
@@ -13431,7 +13431,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1928409848}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000032037497}
-  m_LocalPosition: {x: -0, y: 0, z: 0.255}
+  m_LocalPosition: {x: 0, y: 0.09099999, z: 0.255}
   m_LocalScale: {x: 1.0788203, y: 1.5414588, z: 1.416276}
   m_Children: []
   m_Father: {fileID: 1922093206}
@@ -13458,8 +13458,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.11641284, y: 0.10337665, z: 0.09620265}
-  m_Center: {x: 0.012090084, y: 0.038450312, z: 0.05434407}
+  m_Size: {x: 0.11641285, y: 0.20034014, z: 0.096202634}
+  m_Center: {x: 0.012090084, y: 0.020675274, z: 0.054344065}
 --- !u!1 &1953348996
 GameObject:
   m_ObjectHideFlags: 0
@@ -13604,7 +13604,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1991999084}
   m_LocalRotation: {x: -0, y: 0.0000059604636, z: -0, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.114}
+  m_LocalPosition: {x: 0, y: 0.091, z: 0.114}
   m_LocalScale: {x: 1.0788203, y: 1.5414588, z: 1.416276}
   m_Children: []
   m_Father: {fileID: 1619122021}
@@ -13631,8 +13631,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.11641284, y: 0.10337665, z: 0.09620265}
-  m_Center: {x: 0.012090084, y: 0.038450312, z: 0.05434407}
+  m_Size: {x: 0.11641285, y: 0.20340475, z: 0.096202634}
+  m_Center: {x: 0.012090084, y: 0.022503022, z: 0.054344065}
 --- !u!1001 &1995302959
 Prefab:
   m_ObjectHideFlags: 0
@@ -13957,10 +13957,10 @@ MonoBehaviour:
   grabbedObjectActive: {fileID: 0}
   moveSpeed: 10
   showPlayer: {fileID: 103416766}
-  moveHorizontal: Horizontal_P1
-  moveVertical: Vertical_P1
-  grabButton: Grab/Throw_P1
-  checkButton: Check_P1
+  moveHorizontal: Horizontal_P3
+  moveVertical: Vertical_P3
+  grabButton: Grab/Throw_P3
+  checkButton: Check_P3
   Ennemy: {fileID: 0}
   isGrabbed: 0
   canPunch: 0
