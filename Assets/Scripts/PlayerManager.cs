@@ -13,13 +13,17 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody myRigidbody;
     public GameObject showPlayer;
 
+
     public string moveHorizontal, moveVertical, grabButton, checkButton;
 
     public GameObject Ennemy;
 
     public bool isGrabbed = false;
-    public bool canPunch = false;
+    private bool canPunch = true;
     public Aliments.TeamType playerTeam;
+
+    public float punchTimer;
+    private float actualTimerPunch;
 
  
 
@@ -30,6 +34,7 @@ public class PlayerManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        actualTimerPunch = punchTimer;
         myRigidbody = GetComponent<Rigidbody>();
     }
 
@@ -50,8 +55,19 @@ public class PlayerManager : MonoBehaviour
             Grab();
             Punch();
         }
-        
-        
+
+        if (canPunch == false)
+        {
+            actualTimerPunch -= Time.deltaTime;
+            if (actualTimerPunch <= 0)
+            {
+                canPunch = true;
+                actualTimerPunch = punchTimer;
+            }
+
+        }
+
+
 
 
     }
@@ -77,6 +93,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (grabbedObjectActive != null && Input.GetButtonDown(grabButton) && isGrabbed == false)
         {
+            GameManager.Instance.PlayGrab();
             Aliments grabbedScript = grabbedObjectActive.GetComponent<Aliments>();
             grabbedScript.teamtype = playerTeam;
             Rigidbody grabbedRigidbody = grabbedObjectActive.GetComponent<Rigidbody>();
@@ -91,19 +108,14 @@ public class PlayerManager : MonoBehaviour
 
         if (grabbedObjectActive != null && isGrabbed == true && Input.GetButtonDown(grabButton))
         {
+            GameManager.Instance.PlayLaunch();
             Rigidbody grabbedRigidbody = grabbedObjectActive.GetComponent<Rigidbody>();
             grabbedRigidbody.useGravity = true;
             grabbedRigidbody.isKinematic = false;
             grabbedObjectActive.transform.parent = null;
-            if (canPunch == false)
-            {
+
                 grabbedRigidbody.AddForce(gameObject.transform.forward * 1000);
-            }
-            if (canPunch == true)
-            {
-                grabbedRigidbody.AddForce(gameObject.transform.forward * -1000);
-                canPunch = false;
-            }
+
             isGrabbed = false;
             grabbedObjectActive = null;
             return;
@@ -112,6 +124,7 @@ public class PlayerManager : MonoBehaviour
     }
         public void PunchedGrab(GameObject ennemy, Aliments.TeamType teamType)
     {
+        GameManager.Instance.PlayPunch();
         Aliments grabbedScript = grabbedObjectActive.GetComponent<Aliments>();
         grabbedScript.teamtype = teamType;
             Rigidbody grabbedRigidbody = grabbedObjectActive.GetComponent<Rigidbody>();
@@ -126,6 +139,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void Punched(GameObject ennemy)
     {
+        GameManager.Instance.PlayPunch();
         myRigidbody.AddForce(ennemy.transform.forward * 5000);
 
     }
@@ -134,21 +148,31 @@ public class PlayerManager : MonoBehaviour
     public void Punch()
     {
         PlayerManager ennemyManager = Ennemy.GetComponentInParent<PlayerManager>();
-        if (ennemyManager.isGrabbed == true && Input.GetButtonDown(grabButton) && Ennemy != null)
-        {
-            ennemyManager.PunchedGrab(gameObject,playerTeam);
-            return;
+        
+            if (ennemyManager.isGrabbed == true && Input.GetButtonDown(grabButton) && Ennemy != null)
+            {
+            if (canPunch == true)
+            {
+                ennemyManager.PunchedGrab(gameObject, playerTeam);
+                canPunch = false;
+                return;
+                
+            }
 
+            }
+            if (ennemyManager.isGrabbed == false && Input.GetButtonDown(grabButton) && Ennemy != null)
+            {
+            if (canPunch == true)
+            {
+                ennemyManager.Punched(gameObject);
+                canPunch = false;
+            }
+            }
+            
         }
-        if (ennemyManager.isGrabbed == false && Input.GetButtonDown(grabButton) && Ennemy != null)
-        {
-       
-            ennemyManager.Punched(gameObject);
-
-        }
+        
     }
 
 
-    
-}
+  
  

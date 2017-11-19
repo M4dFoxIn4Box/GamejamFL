@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    public AudioClip punch, canonSong, wrong, great, launch, grab;
     public Transform spawnParent;
     public static GameManager Instance { get; private set; }
     public List<GameObject> spawnItems = new List<GameObject>();
@@ -15,8 +16,8 @@ public class GameManager : MonoBehaviour {
     private int spawnObjectidx;
     public Text TeamBlue;
     public Text TeamRed;
-    private int actualBlueScore;
-    private int actualRedScore;
+    public int actualBlueScore;
+    public int actualRedScore;
     public float timerInitial;
     private float timerActual;
     public Text timerText;
@@ -28,10 +29,13 @@ public class GameManager : MonoBehaviour {
     public Text endText;
     public int buildIndex;
     public ParticleSystem msokeCanon;
+    private AudioSource audioSource;
 
     // Use this for initialization
     private void Awake()
     {
+        Time.timeScale = 1;
+        audioSource = GetComponent<AudioSource>();
         Instance = this;
         buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour {
 
     public void StartingIdx()
     {
+        PlayCanon();
         RndIdx();
         Instantiate(spawnItems[spawnObjectidx], spawnParent.GetChild(spawnIdx[idx]).position, Quaternion.identity, spawnParent.GetChild(spawnIdx[idx]));
         msokeCanon.Play();
@@ -123,12 +128,42 @@ public class GameManager : MonoBehaviour {
 
     public void Restart()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(buildIndex, LoadSceneMode.Single);
+        end = false;
+        SceneManager.LoadScene(buildIndex);
     }
 
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("MainScene");
+    }
+    public void PlayGrab()
+    {
+        audioSource.clip = grab;
+        audioSource.Play();
+    }
+    public void PlayPunch()
+    {
+        audioSource.clip = punch;
+        audioSource.Play();
+    }
+    public void PlayLaunch()
+    {
+        audioSource.clip = launch;
+        audioSource.Play();
+    }
+    public void PlayWrong()
+    {
+        audioSource.clip = wrong;
+        audioSource.Play();
+    }
+    public void PlayGreat()
+    {
+        audioSource.clip = great;
+        audioSource.Play();
+    }
+    public void PlayCanon()
+    {
+        audioSource.clip = canonSong;
+        audioSource.Play();
     }
 }
