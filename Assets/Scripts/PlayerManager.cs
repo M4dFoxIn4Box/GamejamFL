@@ -120,13 +120,13 @@ public class PlayerManager : MonoBehaviour
             grabbedObjectActive.transform.parent = null;
             grabbedRigidbody.AddForce(ennemy.transform.forward * 1000);
             isGrabbed = false;
-        myRigidbody.AddForce(ennemy.transform.forward * 50000);
+        myRigidbody.AddForce(ennemy.transform.forward * 5000);
             grabbedObjectActive = null;
         
     }
     public void Punched(GameObject ennemy)
     {
-        myRigidbody.AddForce(ennemy.transform.forward * 50000);
+        myRigidbody.AddForce(ennemy.transform.forward * 5000);
 
     }
 
