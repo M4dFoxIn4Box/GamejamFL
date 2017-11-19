@@ -2155,52 +2155,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 463537638}
   m_Mesh: {fileID: 4300000, guid: 225a2c573f1ad7e4cb69576613bb7684, type: 3}
---- !u!1001 &480870417
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -14.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 9.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 8.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4453153396033742, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1801945892603156, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-      propertyPath: m_Name
-      value: ConcombreGrab
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 883818399959a2a49bdc0cdebcf01f9c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &497760471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,52 +2562,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.20853913, y: 1, z: 2.8733845}
   m_Center: {x: -0.39573097, y: 0, z: -0.93669224}
---- !u!1001 &631062363
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -17.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 8.328085
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 4.408188
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160819606524472, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971536867912804, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-      propertyPath: m_Name
-      value: CarotteGrab
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: cd90b47f2e5f2b44fb1ff84e773bd7d2, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &633112408
 GameObject:
   m_ObjectHideFlags: 0
@@ -14212,52 +14120,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104215090}
   m_Mesh: {fileID: 4300134, guid: 137fa74fe7518144d86a9fc24bda2866, type: 3}
---- !u!1001 &2110955412
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -21.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 7.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270026306647072, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1166583043094742, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-      propertyPath: m_Name
-      value: AubergineGrab
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 24794f1df040e594fbb289c3f06ddf9a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2137423643
 GameObject:
   m_ObjectHideFlags: 0
