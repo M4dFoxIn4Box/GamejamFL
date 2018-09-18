@@ -31,12 +31,23 @@ public class GameManager : MonoBehaviour {
     public ParticleSystem msokeCanon;
     private AudioSource audioSource;
 
+    public List<Outline> LegumeOutline;
+    public List<Outline> FruitOutline;
+
     // Use this for initialization
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
         Time.timeScale = 1;
+        HideAllOutlines();
         audioSource = GetComponent<AudioSource>();
-        Instance = this;
         buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
     void Start() {
@@ -169,5 +180,55 @@ public class GameManager : MonoBehaviour {
     {
         audioSource.clip = canonSong;
         audioSource.Play();
+    }
+
+    public void DisplayLegumeOutline()
+    {
+        foreach (Outline OutlineToDisplay in LegumeOutline)
+        {
+            OutlineToDisplay.enabled = true;
+        }
+    }
+
+    public void DisplayFruitOutline()
+    {
+        foreach (Outline OutlineToDisplay in FruitOutline)
+        {
+            OutlineToDisplay.enabled = true;
+        }
+    }
+
+    public void HideLegumeOutline()
+    {
+        foreach (Outline OutlineToDisplay in LegumeOutline)
+        {
+            OutlineToDisplay.enabled = false;
+        }
+    }
+
+    public void HideFruitOutline()
+    {
+        foreach (Outline OutlineToDisplay in FruitOutline)
+        {
+            OutlineToDisplay.enabled = false;
+        }
+    }
+
+    public void SetOutline(Aliments.AlimType Type)
+    {
+        if (Type == Aliments.AlimType.Fruit)
+        {
+            DisplayFruitOutline();
+        }
+        else if (Type == Aliments.AlimType.Legumes)
+        {
+            DisplayLegumeOutline();
+        }
+    }
+
+    public void HideAllOutlines()
+    {
+        HideLegumeOutline();
+        HideFruitOutline();
     }
 }
