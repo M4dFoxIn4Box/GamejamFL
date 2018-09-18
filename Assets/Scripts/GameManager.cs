@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
     public int buildIndex;
     public ParticleSystem msokeCanon;
     private AudioSource audioSource;
+    public List<GameObject> WinFxBlue;
+    public List<GameObject> WinFxRed;
 
     public List<Outline> LegumeOutline;
     public List<Outline> FruitOutline;
@@ -46,7 +48,6 @@ public class GameManager : MonoBehaviour {
             Instance = this;
         }
         Time.timeScale = 1;
-        HideAllOutlines();
         audioSource = GetComponent<AudioSource>();
         buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
@@ -97,12 +98,16 @@ public class GameManager : MonoBehaviour {
     {
         actualBlueScore += blueScore;
         TeamBlue.text = actualBlueScore.ToString("f0");
+        if(blueScore > 0)
+        ScoreFxBlue();
     }
 
     public void RedTeamScore(int redScore)
     {
         actualRedScore += redScore;
         TeamRed.text = actualRedScore.ToString("f0");
+        if (redScore > 0)
+        ScoreFxRed();
     }
 
     public void TimerCooldown()
@@ -182,53 +187,22 @@ public class GameManager : MonoBehaviour {
         audioSource.Play();
     }
 
-    public void DisplayLegumeOutline()
+
+    public void ScoreFxRed()
     {
-        foreach (Outline OutlineToDisplay in LegumeOutline)
+        foreach (GameObject Particle in WinFxRed)
         {
-            OutlineToDisplay.enabled = true;
+            Particle.SetActive(false);
+            Particle.SetActive(true);
         }
     }
 
-    public void DisplayFruitOutline()
+    public void ScoreFxBlue()
     {
-        foreach (Outline OutlineToDisplay in FruitOutline)
+        foreach (GameObject Particle in WinFxBlue)
         {
-            OutlineToDisplay.enabled = true;
+            Particle.SetActive(false);
+            Particle.SetActive(true);
         }
-    }
-
-    public void HideLegumeOutline()
-    {
-        foreach (Outline OutlineToDisplay in LegumeOutline)
-        {
-            OutlineToDisplay.enabled = false;
-        }
-    }
-
-    public void HideFruitOutline()
-    {
-        foreach (Outline OutlineToDisplay in FruitOutline)
-        {
-            OutlineToDisplay.enabled = false;
-        }
-    }
-
-    public void SetOutline(Aliments.AlimType Type)
-    {
-        if (Type == Aliments.AlimType.Fruit)
-        {
-            DisplayFruitOutline();
-        }
-        else if (Type == Aliments.AlimType.Legumes)
-        {
-            DisplayLegumeOutline();
-        }
-    }
-
-    public void HideAllOutlines()
-    {
-        HideLegumeOutline();
-        HideFruitOutline();
     }
 }

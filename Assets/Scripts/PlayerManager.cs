@@ -103,7 +103,6 @@ public class PlayerManager : MonoBehaviour
             grabbedObjectActive.transform.position = grabbedPlace.transform.position;
             grabbedObjectActive.transform.parent = gameObject.transform;
             isGrabbed = true;
-            GameManager.Instance.SetOutline(grabbedScript.type);
             return;
         }
 
@@ -119,7 +118,6 @@ public class PlayerManager : MonoBehaviour
 
             isGrabbed = false;
             grabbedObjectActive = null;
-            GameManager.Instance.HideAllOutlines();
             return;
         }
 
