@@ -41,6 +41,10 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.IsEndgame())
+        {
+            return;
+        }
         if (GameManager.Instance.end == false)
         {
             ShowPlayer();
@@ -86,11 +90,20 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Instance.IsEndgame())
+        {
+            myRigidbody.velocity = Vector3.zero;
+            return;
+        }
         myRigidbody.velocity = moveVelocity;
     }
 
     public void Grab()
     {
+        if (GameManager.Instance.IsEndgame())
+        {
+            return;
+        }
         if (grabbedObjectActive != null && Input.GetButtonDown(grabButton) && isGrabbed == false)
         {
             GameManager.Instance.PlayGrab();
@@ -124,6 +137,10 @@ public class PlayerManager : MonoBehaviour
     }
     public void PunchedGrab(GameObject ennemy, Aliments.TeamType teamType)
     {
+        if (GameManager.Instance.IsEndgame())
+        {
+            return;
+        }
         GameManager.Instance.PlayPunch();
         Aliments grabbedScript = grabbedObjectActive.GetComponent<Aliments>();
         grabbedScript.teamtype = teamType;
@@ -139,6 +156,10 @@ public class PlayerManager : MonoBehaviour
     }
     public void Punched(GameObject ennemy)
     {
+        if (GameManager.Instance.IsEndgame())
+        {
+            return;
+        }
         GameManager.Instance.PlayPunch();
         myRigidbody.AddForce(ennemy.transform.forward * 5000);
 
@@ -147,6 +168,10 @@ public class PlayerManager : MonoBehaviour
 
     public void Punch()
     {
+        if (GameManager.Instance.IsEndgame())
+        {
+            return;
+        }
         if (Ennemy != null)
         {
             PlayerManager ennemyManager = Ennemy.GetComponentInParent<PlayerManager>();

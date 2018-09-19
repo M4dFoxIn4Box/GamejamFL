@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour {
     private AudioSource audioSource;
     public List<GameObject> WinFxBlue;
     public List<GameObject> WinFxRed;
+    public List<GameObject> WinFxEnd;
+
+    private bool b_IsEndGame = false;
 
     public List<Outline> LegumeOutline;
     public List<Outline> FruitOutline;
@@ -120,11 +123,11 @@ public class GameManager : MonoBehaviour {
         
         if (timerActual <= 0)
         {
+            b_IsEndGame = true;
             endBlue.text = TeamBlue.text;
             endRed.text = TeamRed.text;
             end = true;
             timerActual = 0;
-            Time.timeScale = 0;
             endMenu.SetActive(true);
             igMenu.SetActive(false);
             if (actualBlueScore > actualRedScore)
@@ -139,6 +142,7 @@ public class GameManager : MonoBehaviour {
             {
                 endText.text = "Egalite !!";
             }
+            SetEndgameWinFx();
         }
     }
 
@@ -204,5 +208,18 @@ public class GameManager : MonoBehaviour {
             Particle.SetActive(false);
             Particle.SetActive(true);
         }
+    }
+
+    public void SetEndgameWinFx()
+    {
+        foreach(GameObject Particle in WinFxEnd)
+        {
+            Particle.SetActive(true);
+        }
+    }
+
+    public bool IsEndgame()
+    {
+        return b_IsEndGame;
     }
 }
