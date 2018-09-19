@@ -128,19 +128,20 @@ public class GameManager : MonoBehaviour {
             endRed.text = TeamRed.text;
             end = true;
             timerActual = 0;
+            //Time.timeScale = 0;
             endMenu.SetActive(true);
             igMenu.SetActive(false);
             if (actualBlueScore > actualRedScore)
             {
-                endText.text = "L'equipe <color=blue>Bleu</color> a gagnee !!";
+                endText.text = "L'équipe <color=blue>Bleu</color> à gagnée !!";
             }
             if (actualBlueScore < actualRedScore)
             {
-                endText.text = "L'equipe <color=red>Rouge</color> a gagnee !!";
+                endText.text = "L'équipe <color=red>Rouge</color> à gagnée !!";
             }
             if (actualBlueScore == actualRedScore)
             {
-                endText.text = "Egalite !!";
+                endText.text = "Egalité !!";
             }
             SetEndgameWinFx();
         }
