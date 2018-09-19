@@ -469,7 +469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: 115.88}
+  m_AnchoredPosition: {x: 23, y: 115.88}
   m_SizeDelta: {x: 129.5, y: 129.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278812173
@@ -537,8 +537,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -312.85, y: -398.55}
-  m_SizeDelta: {x: 991.8, y: 95.8}
+  m_AnchoredPosition: {x: -401.8, y: -398.55005}
+  m_SizeDelta: {x: 767.7, y: 95.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323755126
 MonoBehaviour:
@@ -572,8 +572,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Deplacez vous \xE0 l'aide du <color=red> joystick analogique gauche </color>
-    ! "
+  m_Text: "D\xE9placez-vous \xE0 l'aide du <color=red> joystick gauche </color> ! "
 --- !u!222 &323755127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -647,7 +646,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Rep\xE9rez vous sur le champ de bataille  avec la touche <color=red> carr\xE9e
+  m_Text: "Rep\xE9rez-vous sur le champ de bataille  avec la touche <color=red> carr\xE9e
     </color> ou <color=red> Y </color>."
 --- !u!222 &497019066
 CanvasRenderer:
@@ -1320,8 +1319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -47, y: -221}
-  m_SizeDelta: {x: 1523.5, y: 200}
+  m_AnchoredPosition: {x: -16, y: -234}
+  m_SizeDelta: {x: 1548.1, y: 169.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038406379
 MonoBehaviour:
@@ -1356,9 +1355,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Dans <color=red> Frume </color> vous devez mettre le plus de <color=red>
-    fruits </color> et <color=red> l\xE9gumes </color>dans la remorque correspondante
-    avant la fin du<color=red>  temps impartis</color>.\nMais attention aux <color=red>
-    coup bas</color> !"
+    fruits </color>et <color=red>l\xE9gumes </color>dans la remorque correspondante
+    avant la fin du<color=red>  temps imparti</color>. Mais attention aux <color=red>
+    coups bas</color> !"
 --- !u!222 &1038406380
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1624,7 +1623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1287023499
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2089,10 +2088,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Appuyez sur la touche <color=red>croix </color> ou<color=red> B </color>
-    pour attraper les <color=red> fruits </color> et <color=red> l\xE9gumes </color>.\n<color=red>
-    Lancez-les </color> dans la <color=red>bonne remorque </color> avec le<color=red>
-    m\xEAme bouton</color>.\nLorsque vous avez les<color=red> mains vides</color>
-    appuyez sur<color=red> croix</color> ou <color=red> B </color>pour attaquez !"
+    pour attraper les <color=red> fruits</color> et<color=red> l\xE9gumes </color>.\n<color=red>Lancez-les
+    </color> dans la <color=red>bonne remorque </color> avec le<color=red> m\xEAme
+    bouton</color>.\nLorsque vous avez les<color=red> mains vides</color>, appuyez
+    sur<color=red> croix</color> ou <color=red> B </color>pour attaquer !"
 --- !u!222 &1587510979
 CanvasRenderer:
   m_ObjectHideFlags: 0
