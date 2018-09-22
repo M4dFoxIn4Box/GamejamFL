@@ -108,6 +108,7 @@ public class PlayerManager : MonoBehaviour
         {
             GameManager.Instance.PlayGrab();
             Aliments grabbedScript = grabbedObjectActive.GetComponent<Aliments>();
+            grabbedObjectActive.GetComponent<Outline>().enabled = false;
             grabbedScript.teamtype = playerTeam;
             Rigidbody grabbedRigidbody = grabbedObjectActive.GetComponent<Rigidbody>();
             grabbedRigidbody.useGravity = false;

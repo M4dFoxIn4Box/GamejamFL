@@ -20,6 +20,7 @@ public class FLTrigger : MonoBehaviour {
         {
             PlayerManager player = gameObject.GetComponentInParent<PlayerManager>();
             player.grabbedObjectActive = collision.gameObject;
+            collision.transform.GetComponent<Outline>().enabled = true;
             return;
         }
         
@@ -39,6 +40,9 @@ public class FLTrigger : MonoBehaviour {
             player.Ennemy = null;
 
         }
+        if (collision.gameObject.CompareTag("FL"))
+        {
+            collision.transform.GetComponent<Outline>().enabled = false;
+        }
     }
-
 }
