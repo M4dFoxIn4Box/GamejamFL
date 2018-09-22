@@ -1353,7 +1353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mettez le plus de <color=red><b> fruits </b>et <b>l\xE9gumes </b></color>dans
+  m_Text: "Mettez le plus de <color=red> fruits </color>et <color=red>l\xE9gumes </color>dans
     la <color=red>remorque correspondante  </color> avant la fin du<color=red>  temps
     imparti</color>. Mais attention aux <color=red> coups bas</color> !"
 --- !u!222 &1038406380
